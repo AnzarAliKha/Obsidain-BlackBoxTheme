@@ -1,0 +1,122 @@
+/* ======================================= */
+/* 💚 NEON VERDANT — Green Neon Theme      */
+/* ======================================= */
+
+:root {
+
+  /* Base colors */
+  --background-primary: #0b0f0c;
+  --background-secondary: #0f1612;
+  --background-modifier-border: #1aff7c;
+
+  --text-normal: #d6ffe8;
+  --text-muted: #7affb5;
+  --text-faint: #3cff9a;
+
+  --interactive-accent: #1aff7c;
+  --interactive-accent-hover: #66ffb3;
+
+  /* Headings */
+  --h1-color: #1aff7c;
+  --h2-color: #4dff9d;
+  --h3-color: #66ffb3;
+  --h4-color: #7affc1;
+  --h5-color: #9dffd3;
+  --h6-color: #c7ffe8;
+
+  /* Links */
+  --link-color: #1aff7c;
+  --link-color-hover: #66ffb3;
+
+  /* Code */
+  --code-background: #06140d;
+  --code-normal: #d6ffe8;
+  --code-comment: #3cff9a;
+  --code-string: #66ffb3;
+  --code-keyword: #1aff7c;
+
+  /* Tags */
+  --tag-color: #1aff7c;
+  --tag-color-hover: #66ffb3;
+
+  /* Checkboxes */
+  --checkbox-color: #06140d;
+  --checkbox-marker-color: #1aff7c;
+  --checkbox-border-color: #1aff7c;
+  --checklist-done-color: #66ffb3;
+
+  /* Callouts */
+  --callout-title-color: #1aff7c;
+  --callout-content-background: #06140d;
+}
+
+
+/* ======================================= */
+/* Interface Styling                       */
+/* ======================================= */
+
+body {
+  background: radial-gradient(circle at top, #0f2a1d, #050805 70%) !important;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+}
+
+/* Notes */
+.markdown-preview-view,
+.markdown-source-view {
+  background: rgba(6, 20, 13, 0.9) !important;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(26, 255, 124, 0.08);
+}
+
+/* Headings glow */
+h1, h2, h3, h4, h5, h6 {
+  text-shadow: 0 0 12px rgba(26, 255, 124, 0.35);
+  letter-spacing: 0.05em;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 255, 124, 0.5);
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-color-hover);
+  text-shadow: 0 0 10px rgba(102, 255, 179, 0.6);
+}
+
+/* Code blocks */
+pre {
+  background: linear-gradient(180deg, #06140d, #020805);
+  border: 1px solid rgba(26, 255, 124, 0.4);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(26, 255, 124, 0.15);
+}
+
+/* Inline code */
+code {
+  background: rgba(26, 255, 124, 0.08);
+  border-radius: 6px;
+  padding: 0.15em 0.4em;
+}
+
+/* Tags */
+.tag {
+  background: rgba(26, 255, 124, 0.15);
+  border: 1px solid rgba(26, 255, 124, 0.5);
+  border-radius: 999px;
+  padding: 2px 10px;
+}
+
+/* Tabs */
+.workspace-tab-header {
+  background: linear-gradient(to bottom, #0f2a1d, #050805) !important;
+  border-bottom: 1px solid rgba(26, 255, 124, 0.4);
+}
+
+/* Cursor */
+textarea,
+.cm-editor {
+  caret-color: #1aff7c !important;
+}
