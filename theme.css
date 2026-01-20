@@ -1,122 +1,281 @@
 /* ======================================= */
-/* 💚 NEON VERDANT — Green Neon Theme      */
+/* 🟠 BLACK BOX — Orange Neon Theme        */
 /* ======================================= */
 
 :root {
 
   /* Base colors */
-  --background-primary: #0b0f0c;
-  --background-secondary: #0f1612;
-  --background-modifier-border: #1aff7c;
+  --background-primary: #0a0a0a;
+  --background-secondary: #111111;
+  --background-modifier-border: #ff7f1a;
 
-  --text-normal: #d6ffe8;
-  --text-muted: #7affb5;
-  --text-faint: #3cff9a;
+  --text-normal: #ffd699;
+  --text-muted: #ffb266;
+  --text-faint: #ff944d;
 
-  --interactive-accent: #1aff7c;
-  --interactive-accent-hover: #66ffb3;
+  --interactive-accent: #ff7f1a;
+  --interactive-accent-hover: #ffa64d;
 
   /* Headings */
-  --h1-color: #1aff7c;
-  --h2-color: #4dff9d;
-  --h3-color: #66ffb3;
-  --h4-color: #7affc1;
-  --h5-color: #9dffd3;
-  --h6-color: #c7ffe8;
+  --h1-color: #ff7f1a;
+  --h2-color: #ff944d;
+  --h3-color: #ffb266;
+  --h4-color: #ffc299;
+  --h5-color: #ffd699;
+  --h6-color: #ffe6cc;
 
   /* Links */
-  --link-color: #1aff7c;
-  --link-color-hover: #66ffb3;
+  --link-color: #ff7f1a;
+  --link-color-hover: #ffa64d;
 
   /* Code */
-  --code-background: #06140d;
-  --code-normal: #d6ffe8;
-  --code-comment: #3cff9a;
-  --code-string: #66ffb3;
-  --code-keyword: #1aff7c;
+  --code-background: #1a1a1a;
+  --code-normal: #ffd699;
+  --code-comment: #ff944d;
+  --code-string: #ffb266;
+  --code-keyword: #ff7f1a;
 
   /* Tags */
-  --tag-color: #1aff7c;
-  --tag-color-hover: #66ffb3;
+  --tag-color: #ff7f1a;
+  --tag-color-hover: #ffa64d;
 
   /* Checkboxes */
-  --checkbox-color: #06140d;
-  --checkbox-marker-color: #1aff7c;
-  --checkbox-border-color: #1aff7c;
-  --checklist-done-color: #66ffb3;
+  --checkbox-color: #1a1a1a;
+  --checkbox-marker-color: #ff7f1a;
+  --checkbox-border-color: #ff7f1a;
+  --checklist-done-color: #ffb266;
 
   /* Callouts */
-  --callout-title-color: #1aff7c;
-  --callout-content-background: #06140d;
+  --callout-title-color: #ff7f1a;
+  --callout-content-background: #1a1a1a;
 }
-
 
 /* ======================================= */
 /* Interface Styling                       */
 /* ======================================= */
 
 body {
-  background: radial-gradient(circle at top, #0f2a1d, #050805 70%) !important;
+  background: radial-gradient(circle at top, #0a0a0a, #050505 70%) !important;
   font-family: "JetBrains Mono", "Fira Code", monospace;
 }
 
 /* Notes */
 .markdown-preview-view,
 .markdown-source-view {
-  background: rgba(6, 20, 13, 0.9) !important;
+  background: rgba(26, 26, 26, 0.95) !important;
   border-radius: 12px;
-  box-shadow: 0 0 40px rgba(26, 255, 124, 0.08);
+  box-shadow: 0 0 40px rgba(255, 127, 26, 0.15);
 }
 
 /* Headings glow */
 h1, h2, h3, h4, h5, h6 {
-  text-shadow: 0 0 12px rgba(26, 255, 124, 0.35);
+  text-shadow: 0 0 12px rgba(255, 127, 26, 0.45);
   letter-spacing: 0.05em;
 }
 
 /* Links */
 a {
   text-decoration: none;
-  border-bottom: 1px solid rgba(26, 255, 124, 0.5);
+  border-bottom: 1px solid rgba(255, 127, 26, 0.5);
   transition: all 0.2s ease;
 }
 
 a:hover {
   color: var(--link-color-hover);
-  text-shadow: 0 0 10px rgba(102, 255, 179, 0.6);
+  text-shadow: 0 0 10px rgba(255, 166, 77, 0.7);
 }
 
 /* Code blocks */
 pre {
-  background: linear-gradient(180deg, #06140d, #020805);
-  border: 1px solid rgba(26, 255, 124, 0.4);
+  background: linear-gradient(180deg, #1a1a1a, #0d0d0d);
+  border: 1px solid rgba(255, 127, 26, 0.4);
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(26, 255, 124, 0.15);
+  box-shadow: 0 0 20px rgba(255, 127, 26, 0.15);
 }
 
 /* Inline code */
 code {
-  background: rgba(26, 255, 124, 0.08);
+  background: rgba(255, 127, 26, 0.08);
   border-radius: 6px;
   padding: 0.15em 0.4em;
 }
 
 /* Tags */
 .tag {
-  background: rgba(26, 255, 124, 0.15);
-  border: 1px solid rgba(26, 255, 124, 0.5);
+  background: rgba(255, 127, 26, 0.15);
+  border: 1px solid rgba(255, 127, 26, 0.5);
   border-radius: 999px;
   padding: 2px 10px;
 }
 
 /* Tabs */
 .workspace-tab-header {
-  background: linear-gradient(to bottom, #0f2a1d, #050805) !important;
-  border-bottom: 1px solid rgba(26, 255, 124, 0.4);
+  background: linear-gradient(to bottom, #111111, #050505) !important;
+  border-bottom: 1px solid rgba(255, 127, 26, 0.4);
 }
 
 /* Cursor */
 textarea,
 .cm-editor {
-  caret-color: #1aff7c !important;
+  caret-color: #ff7f1a !important;
+}
+/* ======================================= */
+/* 🟠 BLACK BOX — Cyber UI Enhancements    */
+/* ======================================= */
+
+/* Sidebar & File Explorer */
+.workspace-split.mod-left-split,
+.workspace-split.mod-right-split {
+  background: linear-gradient(180deg, #0b0b0b, #050505) !important;
+  border-right: 1px solid rgba(255, 127, 26, 0.25);
+  box-shadow: inset -10px 0 30px rgba(255, 127, 26, 0.05);
+}
+
+/* Folder colors */
+.nav-folder-title {
+  color: #ffa64d !important;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 8px rgba(255, 127, 26, 0.6);
+}
+
+/* File colors */
+.nav-file-title {
+  color: #ffd699 !important;
+  opacity: 0.85;
+}
+
+/* Active file */
+.nav-file-title.is-active {
+  background: linear-gradient(90deg, rgba(255,127,26,0.25), transparent);
+  border-left: 3px solid #ff7f1a;
+  color: #fff2e0 !important;
+  text-shadow: 0 0 10px rgba(255,127,26,0.8);
+}
+
+/* Hover file */
+.nav-file-title:hover {
+  background: rgba(255,127,26,0.08);
+}
+
+/* ======================================= */
+/* Selection Glow                          */
+/* ======================================= */
+
+::selection {
+  background: rgba(255, 127, 26, 0.4);
+  color: #fff;
+  text-shadow: 0 0 6px rgba(255,127,26,0.8);
+}
+
+/* ======================================= */
+/* Status Bar                              */
+/* ======================================= */
+
+.status-bar {
+  background: linear-gradient(90deg, #0a0a0a, #111111);
+  border-top: 1px solid rgba(255,127,26,0.3);
+  box-shadow: 0 -5px 20px rgba(255,127,26,0.15);
+  color: #ffb266;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+/* ======================================= */
+/* Buttons & Inputs                        */
+/* ======================================= */
+
+button,
+select,
+textarea,
+input {
+  background: #0d0d0d !important;
+  border: 1px solid rgba(255,127,26,0.4) !important;
+  color: #ffd699 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 12px rgba(255,127,26,0.08);
+}
+
+button:hover {
+  background: rgba(255,127,26,0.15) !important;
+  box-shadow: 0 0 16px rgba(255,127,26,0.4);
+}
+
+/* ======================================= */
+/* Scrollbars                             */
+/* ======================================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff7f1a, #ffb266);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255,127,26,0.8);
+}
+
+/* ======================================= */
+/* Floating Panels / Modals                */
+/* ======================================= */
+
+.modal,
+.menu,
+.suggestion-container {
+  background: rgba(15, 15, 15, 0.9) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,127,26,0.35);
+  border-radius: 14px;
+  box-shadow: 0 0 30px rgba(255,127,26,0.25);
+}
+
+/* ======================================= */
+/* Search Bar Glow                         */
+/* ======================================= */
+
+input[type="search"] {
+  background: rgba(15,15,15,0.9) !important;
+  border: 1px solid rgba(255,127,26,0.5) !important;
+  box-shadow: 0 0 20px rgba(255,127,26,0.25);
+}
+
+/* ======================================= */
+/* Graph View                              */
+/* ======================================= */
+
+.graph-view.color-line {
+  color: #ff7f1a;
+}
+
+.graph-view.color-fill {
+  color: #ffb266;
+}
+
+/* ======================================= */
+/* Active Pane Glow                        */
+/* ======================================= */
+
+.workspace-leaf.mod-active .view-content {
+  box-shadow: inset 0 0 40px rgba(255,127,26,0.12);
+  border-radius: 14px;
+}
+
+/* ======================================= */
+/* Checkbox Cyber Style                   */
+/* ======================================= */
+
+input[type="checkbox"] {
+  border: 2px solid #ff7f1a !important;
+  background: #0a0a0a !important;
+  box-shadow: 0 0 8px rgba(255,127,26,0.6);
+}
+
+input[type="checkbox"]:checked {
+  background: #ff7f1a !important;
+  box-shadow: 0 0 12px rgba(255,127,26,0.9);
 }
