@@ -1,0 +1,209 @@
+/* ================================================= */
+/* ✏️ HANDWRITTEN GRID NOTEBOOK — REFINED EDITION   */
+/* ================================================= */
+
+:root {
+  /* 📄 Paper */
+  --bg-paper: #1a0323;
+
+  /* 📐 Grid */
+  --grid-size: 26px;
+  --grid-line: rgba(255, 255, 255, 0.06);
+
+  /* ✏️ Pencil palette */
+  --pencil-white: #e0e0e0;
+  --pencil-silver: #b8babf;
+  --pencil-blue: #87a9be;
+  --pencil-red: #c27d7d;
+  --pencil-green: #8eb38e;
+  --pencil-orange: #d19a66;
+
+  /* ✍️ Handwritten font */
+  --font-handwritten: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+
+  /* Obsidian internal fonts */
+  --font-default: var(--font-handwritten);
+  --font-interface: var(--font-handwritten);
+  --font-monospace: var(--font-handwritten);
+
+  /* ================================================= */
+  /* 🌌 VAUXHALL COLOR AURA (added only)               */
+  /* ================================================= */
+
+  --vaux-cyan: #45e0ff;
+  --vaux-blue: #6aa8ff;
+  --vaux-violet: #9b86ff;
+  --vaux-green: #5fffd7;
+  --vaux-pink: #ff7ad9;
+
+  --vaux-glow-soft: 0 0 6px rgba(90, 190, 255, 0.35);
+  --vaux-glow-mid: 0 0 10px rgba(90, 190, 255, 0.55);
+}
+
+/* ================================================= */
+/* ✍️ GLOBAL HANDWRITING                             */
+/* ================================================= */
+
+*, *::before, *::after {
+  font-family: var(--font-handwritten) !important;
+}
+
+/* ================================================= */
+/* 📄 GRID NOTEBOOK BACKGROUND                       */
+/* ================================================= */
+
+.markdown-source-view.mod-cm6 .cm-scroller,
+.markdown-preview-view {
+  background-color: var(--bg-paper);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+  background-attachment: local;
+}
+
+/* ================================================= */
+/* ✏️ BODY TEXT                                     */
+/* ================================================= */
+
+.cm-content,
+.markdown-rendered,
+.nav-file-title,
+.nav-folder-title {
+  color: var(--pencil-silver) !important;
+  font-size: 1.1em;
+  line-height: 1.85;
+}
+
+/* ================================================= */
+/* 📝 HEADERS — COLORED PENCILS + VAUXHALL GLOW       */
+/* ================================================= */
+
+h1, .cm-header-1 {
+  color: var(--vaux-green) !important;
+  font-weight: normal !important;
+  font-size: 1.8em;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 6px;
+  text-shadow: var(--vaux-glow-soft);
+}
+
+h2, .cm-header-2 {
+  color: var(--vaux-cyan) !important;
+  font-weight: normal !important;
+  text-shadow: var(--vaux-glow-soft);
+}
+
+h3, .cm-header-3 {
+  color: var(--vaux-blue) !important;
+  font-weight: normal !important;
+}
+
+h4, .cm-header-4 {
+  color: var(--vaux-violet) !important;
+  font-weight: normal !important;
+}
+
+h5, .cm-header-5 {
+  color: var(--vaux-pink) !important;
+  font-weight: normal !important;
+}
+
+h6, .cm-header-6 {
+  color: #ff9de6 !important;
+}
+
+/* ================================================= */
+/* 🔗 LINKS — BLUE PENCIL + CYBER AURA                */
+/* ================================================= */
+
+.cm-link,
+.cm-url,
+.markdown-rendered a {
+  color: var(--vaux-cyan) !important;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  opacity: 0.95;
+  text-shadow: 0 0 4px rgba(80, 200, 255, 0.35);
+}
+
+/* ================================================= */
+/* ➖ HORIZONTAL RULE — PENCIL STROKE                */
+/* ================================================= */
+
+hr {
+  border: none !important;
+  height: 2px !important;
+  width: 80%;
+  margin: 2em 0 !important;
+  background: var(--pencil-red) !important;
+  opacity: 0.4;
+}
+
+/* ================================================= */
+/* 📋 LISTS & BULLETS                                */
+/* ================================================= */
+
+.cm-list-indent,
+.list-bullet,
+.cm-formatting-list {
+  color: var(--vaux-blue) !important;
+}
+
+/* ================================================= */
+/* ☑️ PENCIL CHECKBOXES                              */
+/* ================================================= */
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--pencil-silver);
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background: var(--pencil-silver);
+  opacity: 0.55;
+}
+
+/* ================================================= */
+/* 🖍 GRAPHITE ICONS + COOL GLOW                     */
+/* ================================================= */
+
+svg,
+.clickable-icon,
+.side-dock-ribbon-action,
+.nav-action-button,
+.tree-item-icon {
+  color: var(--pencil-silver) !important;
+  opacity: 0.65;
+  filter: drop-shadow(0 0 2px rgba(90, 180, 255, 0.25));
+}
+
+/* ================================================= */
+/* 🧽 SELECTION — SAFE OVERLAY                       */
+/* ================================================= */
+
+::selection {
+  background: rgba(90, 180, 255, 0.22) !important;
+}
+
+/* ================================================= */
+/* 📄 CLEAN NOTEBOOK UI                              */
+/* ================================================= */
+
+.vertical-split-header,
+.workspace-tabs,
+.workspace-tab-header-container,
+.nav-header {
+  border: none !important;
+  background: transparent !important;
+}
+
+.nav-file-title,
+.nav-folder-title {
+  font-size: 0.95em;
+}
