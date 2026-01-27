@@ -1,0 +1,613 @@
+/* ===========================================
+   BLACKBOX THEME - BRIGHT COLOR SCHEME
+   ===========================================
+
+   This Obsidian theme features a vibrant color palette with bright oranges, greens, blues, reds, and yellows.
+   It maintains a "notebook" aesthetic with cursive fonts while providing excellent visibility and contrast.
+
+   Color Philosophy:
+   - Electric Orange Red (#ff4500): Primary accent for high energy
+   - Electric Teal (#00ffaa): Secondary accent for vibrant balance
+   - Electric Blue (#0066ff): Navigation and links for dynamic trust
+   - Electric Green (#00ff66): Success states and positive elements
+   - Electric Pink (#ff0066): Important items and alerts
+   - Pure Yellow (#ffff00): Highlights and maximum attention
+
+   =========================================== */
+
+:root{
+   /* Primary theme colors - used for general accents */
+   --pencil-primary:#ff4500; /* Vibrant orange red - main theme color */
+   --pencil-secondary:#00ffaa; /* Electric teal - complementary color */
+}
+body{
+   /* ==================== GENERAL STYLING ==================== */
+
+   /* Border styling - defines default border thickness */
+   --border-width:3px;
+
+   /* Cursor styling - mouse pointer behavior */
+   --cursor:default;
+   --cursor-link:pointer;
+
+   /* Icon styling - controls all icons throughout the interface */
+   --icon-size: 16px;
+   --icon-color: #ffff00;          /* Pure Yellow - default icon color */
+   --icon-color-hover: #ff6600;    /* Vivid Orange - on hover */
+   --icon-color-active: #ff0000;   /* Pure Red - when active/pressed */
+   --icon-color-focused: #ff1493;  /* Deep Pink - when focused */
+   --icon-opacity: 0.95;           /* High opacity for vibrant look */
+   --icon-opacity-hover: 1;        /* Full opacity on interaction */
+   --icon-opacity-active: 1;
+
+   /* Typography styling - fonts and text formatting */
+   --font-interface-theme: "Segoe Print", "Bradley Hand", "Chalkboard SE", "Comic Sans MS", cursive; /* Handwriting fonts for interface */
+   --font-text-theme: "Segoe Print", "Bradley Hand", "Chalkboard SE", "Comic Sans MS", cursive; /* Same for text content */
+   --font-monospace-theme: 'Courier New', monospace; /* Monospace for code */
+   --font-weight: 700;             /* Default font weight */
+   --bold-modifier: 500;           /* Additional weight for bold text */
+   --bold-weight: 900;             /* Very bold weight */
+   --bold-color: #f3ecec;           /* Light color for bold text */
+   --italic-color: rgb(253, 252, 253); /* Light color for italic text */
+  /* Checkbox styling - task list checkboxes */
+  --checkbox-radius: 50%;           /* Circular checkboxes */
+  --checkbox-size: 18px;            /* Size of checkbox */
+  --checkbox-marker-color: #ffffff; /* White checkmark */
+  --checkbox-color: #00ff66;        /* Electric Green - checked state */
+  --checkbox-color-hover: #0066ff;  /* Electric Blue - hover state */
+  --checkbox-border-color: #a1a1aa; /* Default border */
+  --checkbox-border-color-hover: #f97316; /* Orange border on hover */
+  --checklist-done-decoration: line-through; /* Strikethrough for completed tasks */
+  --checklist-done-color: #6b7280; /* Muted color for completed items */
+  --checkbox-margin-inline-start: 0.5em; /* Spacing from text */
+  /* ==================== NAVIGATION STYLING ==================== */
+  /* File explorer and navigation pane styling */
+
+  /* Item appearance */
+  --nav-item-size: 0.95em;           /* Font size for nav items */
+  --nav-item-color: #1f2937;         /* Default text color */
+  --nav-item-color-hover: #0066ff;   /* Electric Blue on hover */
+  --nav-item-color-active: #00ff66; /* Electric Green when active */
+  --nav-item-color-selected: #ff0066; /* Electric Pink when selected */
+  --nav-item-color-highlighted: #ffffff; /* White for highlights */
+
+  /* Background colors for interactions */
+  --nav-item-background-hover: rgba(59, 130, 246, 0.1);   /* Blue tint on hover */
+  --nav-item-background-active: rgba(16, 185, 129, 0.15); /* Green tint when active */
+  --nav-item-background-selected: rgba(239, 68, 68, 0.12); /* Red tint when selected */
+
+  /* Spacing and layout */
+  --nav-item-padding: 6px 10px;      /* Padding around items */
+  --nav-item-parent-padding: 6px 8px; /* Parent folder padding */
+  --nav-item-children-padding-start: 16px; /* Indentation for children */
+  --nav-item-children-margin-start: 8px;   /* Margin for child items */
+
+  /* Font weights for different states */
+  --nav-item-weight: 500;            /* Normal weight */
+  --nav-item-weight-hover: 600;      /* Slightly bolder on hover */
+  --nav-item-weight-active: 700;     /* Bold when active */
+
+  /* Other properties */
+  --nav-item-white-space: nowrap;     /* Prevent text wrapping */
+  --nav-indentation-guide-width: 1.5px; /* Width of indentation lines */
+  --nav-indentation-guide-color: rgba(59, 130, 246, 0.3); /* Bright blue guide lines */
+
+  /* Collapse/expand icons */
+  --nav-collapse-icon-color: #fbbf24;        /* Yellow for expanded */
+  --nav-collapse-icon-color-collapsed: #f97316; /* Orange for collapsed */
+
+  /* Folder headings */
+  --nav-heading-color: #1e1b4b;       /* Dark color for folder names */
+  --nav-heading-color-hover: #3b82f6; /* Blue on hover */
+  --nav-heading-color-collapsed: #374151; /* Muted when collapsed */
+  --nav-heading-color-colapsed-hover: #1f2937; /* Darker on hover when collapsed */
+  --nav-heading-weight: 700;         /* Bold headings */
+  --nav-heading-weight-hover: 700;   /* Stay bold on hover */
+  /* ==================== TABS STYLING ==================== */
+  /* File tab appearance and behavior */
+
+  /* Background and text colors */
+  --tab-background-active: #ffffff;   /* White background for active tab */
+  --tab-text-color: #374151;          /* Default tab text */
+  --tab-text-color-active: #00ff66;   /* Electric Green for active tab */
+  --tab-text-color-focused: #1f2937;  /* Darker when focused */
+  --tab-text-color-focused-active: #00ff66; /* Electric Green when focused and active */
+  --tab-text-color-focused-highlighted: #ff6600; /* Vivid Orange for highlights */
+  --tab-text-color-focused-active-current: #ff0066; /* Electric Pink for current focused */
+
+  /* Typography */
+  --tab-font-size: 0.9rem;           /* Tab font size */
+  --tab-font-weight: 500;            /* Medium weight */
+
+  /* Container and separators */
+  --tab-container-background: #f1f5f9; /* Light background for tab bar */
+  --tab-divider-color: rgba(0, 0, 0, 0.05); /* Subtle dividers */
+  --tab-outline-color: #e2e8f0;      /* Border color */
+  --tab-outline-width: 1px;          /* Border thickness */
+
+  /* Shape and sizing */
+  --tab-curve: 8px;                  /* Border radius value */
+  --tab-radius: 6px 6px 0 0;         /* Top rounded corners */
+  --tab-radius-active: 6px 6px 0 0; /* Same for active tabs */
+  --tab-width: 180px;                /* Default tab width */
+  --tab-max-width: 240px;            /* Maximum tab width */
+
+  /* Stacked tabs (when many tabs are open) */
+  --tab-stacked-pane-width: 700px;   /* Width of stacked pane */
+  --tab-stacked-header-width: 40px;  /* Header width for stacked */
+  --tab-stacked-font-size: 0.85rem;  /* Smaller font for stacked */
+  --tab-stacked-font-weight: 600;    /* Bolder for visibility */
+  --tab-stacked-text-align: center;  /* Centered text */
+  --tab-stacked-text-transform: uppercase; /* All caps */
+  --tab-stacked-text-writing-mode: vertical-lr; /* Vertical text */
+  --tab-stacked-shadow: -2px 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  /* ==================== DATABASE (BASES) STYLING ==================== */
+  /* Styling for Obsidian's database/table views */
+
+  /* Header styling */
+  --bases-header-border-width: 0 0 1px 0; /* Bottom border only */
+  --bases-header-height: 48px;            /* Header height */
+  --bases-header-padding-start: 12px;     /* Left padding */
+  --bases-header-padding-end: 12px;       /* Right padding */
+
+  /* Toolbar elements */
+  --bases-toolbar-label-display: flex;    /* Show labels */
+  --bases-toolbar-badge-display: inline-block; /* Show badges */
+
+  /* Embedded views */
+  --bases-embed-border-width: 1.5px;      /* Border thickness */
+  --bases-embed-border-color: #e2e8f0;    /* Light border color */
+  --bases-embed-border-radius: 8px;       /* Rounded corners */
+
+  /* Filter menu */
+  --bases-filter-menu-width: 280px;       /* Width of filter dropdown */
+
+  /* Table View - The Ledger Look */
+  --bases-table-container-border-width: 1px; /* Container border */
+  --bases-table-container-border-radius: 4px; /* Slight rounding */
+
+  /* Table headers */
+  --bases-table-header-weight: 700;       /* Bold headers */
+  --bases-table-header-color: #2e1065;    /* Dark header text */
+  --bases-table-header-icon-display: inline-block; /* Show sort icons */
+  --bases-table-header-background: #f8fafc; /* Light background */
+  --bases-table-header-background-hover: #f1f5f9; /* Lighter on hover */
+  --bases-table-header-sort-mask: rgba(126, 34, 206, 0.1); /* Sort indicator */
+
+  /* Table structure */
+  --bases-table-border-color: #cbd5e1;    /* Border color */
+  --bases-table-column-border-width: 1px; /* Column borders */
+  --bases-table-row-border-width: 1px;   /* Row borders */
+  --bases-table-row-background-hover: rgba(168, 85, 247, 0.04); /* Row hover */
+  --bases-table-row-height: 36px;        /* Row height */
+  --bases-table-text-size: 0.95em;       /* Text size */
+
+  /* Column sizing */
+  --bases-table-column-max-width: 400px; /* Max column width */
+  --bases-table-column-min-width: 100px; /* Min column width */
+
+  /* Active cell styling */
+  --bases-table-cell-radius-active: 0px; /* No rounding for active */
+  --bases-table-cell-shadow-active: inset 0 0 0 2px #7e22ce; /* Purple focus ring */
+  --bases-table-cell-background-active: #ffffff; /* White background */
+  --bases-table-cell-background-disabled: #f1f5f9; /* Disabled state */
+
+  /* ==================== BLOCKQUOTE STYLING ==================== */
+  /* Styling for quoted text blocks */
+
+  --blockquote-background-color: rgba(251, 191, 36, 0.1); /* Yellow background tint */
+  --blockquote-border-thickness: 3px;     /* Thick left border */
+  --blockquote-border-color: #f97316;     /* Orange border - bright accent */
+  --blockquote-font-style: italic;        /* Italic text for quotes */
+  --blockquote-color: #1e293b;            /* Dark text for readability */
+  /* blockquote styling end */
+  /* ==================== CALLOUT STYLING ==================== */
+  /* Special highlighted note blocks with different types */
+
+  /* General appearance */
+  --callout-border-width: 2px;         /* Border thickness */
+  --callout-border-opacity: 0.4;       /* Semi-transparent borders */
+  --callout-padding: 12px;             /* Internal padding */
+  --callout-radius: 8px;               /* Rounded corners */
+  --callout-blend-mode: multiply;      /* Ink-on-paper blending effect */
+
+  /* Typography */
+  --callout-title-color: inherit;      /* Inherit from callout type */
+  --callout-title-padding: 0 0 8px 0; /* Bottom margin for title */
+  --callout-title-size: 1.05em;        /* Slightly larger title */
+  --callout-title-weight: 700;         /* Bold titles */
+  --callout-content-padding: 4px 0 0 0; /* Top margin for content */
+  --callout-content-background: transparent; /* No background for content */
+
+  /* Type Colors - Each callout type has a distinct vibrant color */
+  --callout-default: 255, 255, 0;     /* Pure Yellow - general notes */
+  --callout-info: 0, 102, 255;        /* Electric Blue - informational */
+  --callout-todo: 161, 161, 170;      /* Pencil Grey - tasks */
+  --callout-important: 255, 0, 102;   /* Electric Pink - critical info */
+  --callout-tip: 0, 255, 102;         /* Electric Green - helpful hints */
+  --callout-success: 0, 255, 0;       /* Pure Green - positive outcomes */
+  --callout-question: 255, 102, 0;    /* Vivid Orange - questions */
+  --callout-warning: 255, 69, 0;      /* Red Orange - cautions */
+  --callout-fail: 255, 0, 0;          /* Pure Red - failures */
+  --callout-error: 220, 20, 60;       /* Crimson - errors */
+  --callout-bug: 255, 0, 128;         /* Magenta - bugs/issues */
+  --callout-example: 128, 0, 255;     /* Electric Purple - examples */
+  --callout-summary: 0, 255, 170;     /* Electric Teal - summaries */
+  --callout-quote: 100, 116, 139;     /* Slate - quotes */
+  /* callout styling end */
+  /* ==================== CODE BLOCK STYLING ==================== */
+  /* Syntax highlighting for code blocks and inline code */
+
+  /* General code appearance */
+  --code-background: #f8fafc;         /* Light background for code */
+  --code-white-space: pre-wrap;      /* Preserve formatting */
+  --code-size: 0.9em;                /* Slightly smaller text */
+
+  /* Syntax Highlighting - Vibrant electric colors for different code elements */
+  --code-normal: #1e293b;            /* Standard text - dark for contrast */
+  --code-comment: #6b7280;           /* Comments - muted grey */
+  --code-function: #0066ff;          /* Functions - electric blue */
+  --code-important: #ff0066;         /* Important keywords - electric pink */
+  --code-keyword: #00ff66;           /* Keywords - electric green */
+  --code-operator: #475569;          /* Operators - medium grey */
+  --code-property: #ff6600;          /* Properties - vivid orange */
+  --code-punctuation: #6b7280;       /* Punctuation - light grey */
+  --code-string: #ffff00;            /* Strings - pure yellow */
+  --code-tag: #ff1493;               /* HTML tags - deep pink */
+  --code-value: #8a2be2;             /* Values - blue violet */
+  /* code styling end */
+
+  /* ==================== FILE VIEW STYLING ==================== */
+  /* Layout and appearance of individual note files */
+
+  --file-line-width: 700px;           /* Maximum width of text content */
+
+  /* Folding and indentation */
+  --file-folding-offset: 24px;        /* Space for fold indicators */
+
+  /* Page layout */
+  --file-margins: 40px 60px;          /* Generous margins for notebook feel */
+
+  /* File header (title area) */
+  --file-header-font-size: 1.1em;     /* Slightly larger title text */
+  --file-header-font-weight: 700;     /* Bold titles */
+  --file-header-border: 1px solid rgba(126, 34, 206, 0.15); /* Subtle separator line */
+  --file-header-justify: flex-start;  /* Left alignment for natural flow */
+  /* file styling end */
+
+  /* ==================== HEADING STYLING ==================== */
+  /* Typography for different heading levels (H1-H6) */
+
+  --heading-formatting: rgba(126, 34, 206, 0.3); /* Faint color for # symbols */
+  --heading-spacing: 1.5em;             /* Space between headings and content */
+
+  /* H1 - Main titles - Royal Red */
+  --h1-color: #e11d48;                  /* Bright red for primary headings */
+  --h1-size: 1.8em;                    /* Large size */
+  --h1-weight: 800;                    /* Very bold */
+  --h1-line-height: 1.3;               /* Tight line spacing */
+  --h1-style: normal;                  /* Normal style */
+  --h1-variant: normal;                /* Normal variant */
+
+  /* H2 - Section headers - Sunset Orange */
+  --h2-color: #ea580c;                  /* Bright orange */
+  --h2-size: 1.6em;                    /* Large but smaller than H1 */
+  --h2-weight: 750;                    /* Bold */
+  --h2-line-height: 1.3;               /* Consistent spacing */
+
+  /* H3 - Subsection headers - Golden Amber */
+  --h3-color: #d97706;                  /* Golden yellow-orange */
+  --h3-size: 1.4em;                    /* Medium-large */
+  --h3-weight: 700;                    /* Bold */
+  --h3-line-height: 1.4;               /* Slightly looser */
+
+  /* H4 - Minor sections - Leaf Green */
+  --h4-color: #059669;                  /* Bright green */
+  --h4-size: 1.25em;                   /* Medium size */
+  --h4-weight: 700;                    /* Bold */
+  --h4-line-height: 1.4;               /* Good readability */
+
+  /* H5 - Small sections - Deep Sky Blue */
+  --h5-color: #0284c7;                  /* Bright blue */
+  --h5-size: 1.1em;                    /* Slightly larger than body */
+  --h5-weight: 650;                    /* Medium-bold */
+  --h5-line-height: 1.5;               /* More spacing */
+
+  /* H6 - Tiny headers - Royal Indigo */
+  --h6-color: #4f46e5;                  /* Deep blue-purple */
+  --h6-size: 1em;                      /* Same as body text */
+  --h6-weight: 600;                    /* Semi-bold */
+  --h6-line-height: 1.5;               /* Generous spacing */
+  --h6-style: italic;                  /* Italic to differentiate smallest heading */
+  /* heading styling end */
+
+  /* ==================== HORIZONTAL RULE STYLING ==================== */
+  /* Thematic breaks between sections */
+
+  --hr-color: rgba(126, 34, 206, 0.2); /* Soft purple ink color */
+  --hr-thickness: 2px;                 /* Felt-tip pen thickness */
+
+  /* ==================== INLINE TITLE STYLING ==================== */
+  /* YAML frontmatter titles and inline headers */
+
+  --inline-title-color: #2e1065;        /* Deep purple for importance */
+  --inline-title-font: "Segoe Print", "Bradley Hand", "Chalkboard SE", "Comic Sans MS", cursive; /* Handwriting font */
+  --inline-title-line-height: 1.2;      /* Generous spacing for cursive */
+  --inline-title-size: 2.2em;           /* Larger than H1 for hierarchy */
+  --inline-title-style: normal;         /* Clean style */
+  --inline-title-variant: normal;       /* Normal variant */
+  --inline-title-weight: 800;           /* Extra bold like thick marker */
+  /* ==================== LINK STYLING ==================== */
+  /* Different link types for navigation and references */
+
+  /* Resolved internal links */
+  --link-color: #0066ff;               /* Electric blue for internal links */
+  --link-color-hover: #0044cc;         /* Deeper blue on hover */
+  --link-decoration: underline;        /* Underlined */
+  --link-decoration-hover: underline;  /* Stay underlined */
+  --link-decoration-thickness: 1.5px;  /* Thick underlines */
+  --link-weight: 600;                  /* Semi-bold */
+
+  /* Unresolved/broken links - "sketch" appearance */
+  --link-unresolved-color: #94a3b8;    /* Pencil grey */
+  --link-unresolved-opacity: 0.7;     /* Semi-transparent */
+  --link-unresolved-filter: none;      /* No special effects */
+  --link-unresolved-decoration-style: dashed; /* Dashed like placeholder */
+  --link-unresolved-decoration-color: #cbd5e1; /* Light grey dashes */
+
+  /* External links - "globe" appearance */
+  --link-external-color: #00ff66;      /* Electric green for external */
+  --link-external-color-hover: #00cc44; /* Deeper green on hover */
+  --link-external-decoration: underline; /* Underlined */
+  --link-external-decoration-hover: underline; /* Stay underlined */
+
+  /* ==================== LIST STYLING ==================== */
+  /* Bulleted and numbered lists */
+
+  /* Indentation and spacing */
+  --list-indent: 2.2em;                /* Standard indentation */
+  --list-indent-editing: 2.2em;        /* Same in edit mode */
+  --list-indent-source: 2.2em;         /* Same in source view */
+  --list-spacing: 0.4em;              /* Breathing room for cursive */
+
+  /* Marker colors - electric and interactive */
+  --list-marker-color: #00ff66;        /* Electric green bullets */
+  --list-marker-color-hover: #0066ff;  /* Electric blue on hover */
+  --list-marker-color-collapsed: #94a3b8; /* Grey when collapsed */
+
+  /* Bullet appearance */
+  --list-bullet-border: none;          /* No border for hand-drawn look */
+  --list-bullet-end-padding: 8px;
+  --list-bullet-radius: 50%;
+  --list-bullet-size: 6px;
+  --list-bullet-transform: translateY(1px); /* Aligns with the baseline of handwriting */
+
+  /* --- Numbered Lists --- */
+  --list-numbered-style: decimal; /* Classic "1. 2. 3." style */
+  /* --- Metadata Container --- */
+  --metadata-background: rgba(168, 85, 247, 0.03);
+  --metadata-display-editing: block;
+  --metadata-display-reading: block;
+  --metadata-max-width: 100%;
+  --metadata-padding: 16px;
+  --metadata-border-color: rgba(126, 34, 206, 0.1);
+  --metadata-border-radius: 8px;
+  --metadata-border-width: 1px;
+  --metadata-gap: 4px;
+
+  /* --- Dividers & Borders --- */
+  --metadata-divider-color: rgba(126, 34, 206, 0.08);
+  --metadata-divider-color-hover: rgba(126, 34, 206, 0.2);
+  --metadata-divider-color-focus: rgba(126, 34, 206, 0.3);
+  --metadata-divider-width: 1px;
+
+  /* --- Individual Property Styling --- */
+  --metadata-property-padding: 4px 8px;
+  --metadata-property-radius: 4px;
+  --metadata-property-radius-hover: 4px;
+  --metadata-property-radius-focus: 4px;
+  --metadata-property-background: transparent;
+  --metadata-property-background-hover: rgba(168, 85, 247, 0.05);
+  --metadata-property-background-active: rgba(168, 85, 247, 0.08);
+
+  /* --- Labels (The Field Names) --- */
+  --metadata-label-background-hover: transparent;
+  --metadata-label-background-active: transparent;
+  --metadata-label-font-size: 0.85em;
+  --metadata-label-font-weight: 600;
+  --metadata-sidebar-label-font-size: 0.8em;
+  --metadata-label-text-color: #629dfb; /* Darker for better visibility */
+  --metadata-label-text-color-hover: #3b82f6; /* Bright Blue */
+  --metadata-label-width: 140px;
+
+  /* --- Inputs (The Values) --- */
+  --metadata-input-height: 28px;
+  --metadata-input-text-color: #e5f324; /* Deep Ink */
+  --metadata-input-font-size: 0.9em;
+  --metadata-sidebar-input-font-size: 0.85em;
+  --metadata-input-background: transparent;
+  --metadata-input-background-hover: rgba(168, 85, 247, 0.05);
+  --metadata-input-background-active: rgba(168, 85, 247, 0.05);
+
+  /* --- Table Container & Structure --- */
+  --table-background: transparent;
+  --table-border-width: 1px;
+  --table-border-color: #cbd5e1;
+  --table-cell-vertical-alignment: baseline;
+  --table-white-space: normal;
+  --table-line-height: 1.5;
+  --table-text-size: 0.95em;
+  --table-text-color: #e08e13;
+  --table-column-max-width: 300px;
+
+  /* --- Table Header (The "Capitals") --- */
+  --table-header-background: rgba(168, 85, 247, 0.05);
+  --table-header-background-hover: rgba(168, 85, 247, 0.1);
+  --table-header-border-width: 0 0 2px 0;
+  --table-header-border-color: #7e22ce;
+  --table-header-font: inherit;
+  --table-header-size: 1em;
+  --table-header-weight: 700;
+  --table-header-color: #5449e5;
+
+  /* --- Rows & Columns (The Ledger Lines) --- */
+  --table-row-alt-background: rgba(241, 245, 249, 0.5);
+  --table-row-background-hover: rgba(168, 85, 247, 0.03);
+  --table-row-alt-background-hover: rgba(168, 85, 247, 0.05);
+  --table-row-last-border-width: 1px;
+  --table-column-alt-background: transparent;
+  --table-column-first-border-width: 0;
+  --table-column-last-border-width: 0;
+
+  /* --- Selections & Dragging (The Interaction) --- */
+  --table-selection: rgba(59, 130, 246, 0.15); /* Blue selection */
+  --table-selection-blend-mode: multiply;
+  --table-selection-border-color: #3b82f6;
+  --table-selection-border-width: 1.5px;
+  --table-selection-border-radius: 4px;
+  --table-drag-handle-background: #f1f5f9;
+  --table-drag-handle-background-active: #e2e8f0;
+  --table-drag-handle-color: #94a3b8;
+  --table-drag-handle-color-active: #10b981; /* Green */
+
+  /* --- Buttons (The "Sketchy" UI) --- */
+  --table-add-button-background: transparent;
+  --table-add-button-border-width: 1px;
+  --table-add-button-border-color: #cbd5e1;
+
+  /* --- Typography --- */
+  --tag-size: 0.85em;
+  --tag-weight: 600;
+  --tag-color: #00ff66;        /* Electric Green */
+  --tag-color-hover: #ffffff;   /* Contrast for hover */
+  --tag-decoration: none;
+  --tag-decoration-hover: none;
+
+  /* --- Backgrounds & Borders --- */
+  --tag-background: rgba(0, 255, 102, 0.15);
+  --tag-background-hover: #00ff66;
+  --tag-border-color: rgba(0, 255, 102, 0.4);
+  --tag-border-color-hover: #00ff66;
+  --tag-border-width: 1.5px;
+
+  /* --- Shape & Spacing --- */
+  --tag-padding-x: 0.65em;
+  --tag-padding-y: 0.15em;
+  --tag-radius: 12px; /* Makes it look like a hand-drawn oval */
+  /* --- The Drafting Surface --- */
+  --canvas-background: #f8fafc;        /* A clean, off-white paper */
+  --canvas-card-label-color: #334155;  /* Darker for better visibility */
+  --canvas-dot-pattern: #e2e8f0;       /* Subtle dots for alignment */
+
+  /* --- The Rainbow Sticky Notes --- */
+  --canvas-color-1: #fecdd3; /* Soft Rose (Pink sticky note) */
+  --canvas-color-2: #ffedd5; /* Soft Peach (Orange sticky note) */
+  --canvas-color-3: #fef9c3; /* Classic Yellow sticky note */
+  --canvas-color-4: #dcfce7; /* Mint Green (Highlighter green) */
+  --canvas-color-5: #e0f2fe; /* Sky Blue (Post-it blue) */
+  --canvas-color-6: #f3e8ff; /* Lavender (Purple sticky note) */
+
+  --vault-profile-display: flex;
+  --vault-profile-actions-display: flex;
+
+  /* --- Typography (The "Bookplate" Signature) --- */
+  --vault-profile-font-size: 0.95em;
+  --vault-profile-font-weight: 700;
+  
+  /* --- Colors --- */
+  --vault-profile-color: #0f172a;       /* Darker for better contrast */
+  --vault-profile-color-hover: #fbbf24; /* Bright Yellow on hover */
+  /* --- Layout --- */
+  --graph-controls-width: 260px;
+
+  /* --- Typography --- */
+  --graph-text: #334155;                /* Darker for better visibility */
+
+  /* --- Lines & Connections --- */
+  --graph-line: rgba(203, 213, 225, 0.4); /* Faint pencil guide lines */
+
+  /* --- Nodes (The Ink Drops) --- */
+  --graph-node: #0066ff;                /* Electric Blue (Resolved notes) */
+  --graph-node-unresolved: #94a3b8;     /* Pencil Grey (Unwritten notes) */
+  --graph-node-focused: #ff0066;        /* Electric Pink (Active focus) */
+  --graph-node-tag: #00ff66;            /* Electric Green (Tags) */
+  --graph-node-attachment: #ff6600;     /* Vivid Orange (Images/Files) */
+
+  /* --- Divider Lines --- */
+  --divider-color: rgba(126, 34, 206, 0.08); /* Faint purple ink */
+  --divider-color-hover: #7e22ce;            /* Vibrant purple on interaction */
+  
+  /* --- Thickness --- */
+  --divider-width: 1px;
+  --divider-width-hover: 3px;               /* Thickens to show where you can drag */
+  
+  /* --- Vertical Sizing --- */
+  --divider-vertical-height: 85%;
+  /* --- Ribbon Background (The "Spine") --- */
+  --ribbon-background: #f1f5f9;           /* Light grey paper tone */
+  --ribbon-background-collapsed: #f8fafc; /* Even lighter when tucked away */
+
+  /* --- Dimensions & Breathing Room --- */
+  --ribbon-width: 44px;  /* Slimmer than default for a more minimalist look */
+  --ribbon-padding: 8px 0; /* Centers the icons vertically */
+/* Scrollbar Track: Completely transparent to keep the "paper" clean */
+  --scrollbar-bg: transparent;
+
+  /* Scrollbar Thumb: A thin, pencil-grey line */
+  --scrollbar-thumb-bg: rgba(148, 163, 184, 0.2);
+
+  /* Active State: Darkens to your theme's purple ink when you grab it */
+  --scrollbar-active-thumb-bg: rgba(126, 34, 206, 0.4);
+  /* Sidebar Font Size: Slightly smaller to fit compact navigation and notes */
+  --sidebar-markdown-font-size: 0.85em;
+
+  /* Tab Text Display: Set to 'block' to ensure your titles are clearly visible */
+  --sidebar-tab-text-display: block;
+  /* --- The Footer Aesthetic --- */
+  --status-bar-background: #f8fafc;         /* Matches your main paper color */
+  --status-bar-border-color: #e2e8f0;      /* A very faint pencil line */
+  --status-bar-border-width: 1px 0 0 0;    /* Only a top border to separate from the page */
+  
+  /* --- Typography & Ink --- */
+  --status-bar-font-size: 0.8em;           /* Small, like a footnote */
+  --status-bar-text-color: #64748b;        /* Muted pencil grey */
+  
+  /* --- Layout & Shape --- */
+  --status-bar-position: relative;         /* Standard flow */
+  --status-bar-radius: 0;                  /* Flush with the window edges */
+  --status-bar-scroll-padding: 0 12px;     /* Breathing room for icons/text */
+  /* --- Display --- */
+  --vault-profile-display: flex;
+  --vault-profile-actions-display: flex;
+
+  /* --- Typography (The Signature) --- */
+  --vault-profile-font-size: 0.95em;
+  --vault-profile-font-weight: 700;
+  
+  /* --- Ink Colors --- */
+  --vault-profile-color: #1e1b4b;       /* Deep Ink Indigo */
+  --vault-profile-color-hover: #7e22ce; /* Vibrant Purple on hover */
+  /* --- The Binding --- */
+  --titlebar-background: #f1f5f9;         /* Same as the Ribbon/Spine */
+  --titlebar-background-focused: #f8fafc; /* Brightens when active */
+  --titlebar-border-width: 0 0 1px 0;    /* A single thin line at the bottom */
+  --titlebar-border-color: #e2e8f0;      /* Light pencil grey */
+
+  /* --- The Title Ink --- */
+  --titlebar-text-color: #64748b;        /* Muted pencil ink */
+  --titlebar-text-color-focused: #2e1065; /* Deep purple ink when window is active */
+  --titlebar-text-weight: 600;
+
+  /* --- Layout --- */
+  --header-height: 40px;                 /* Clean, slim profile */
+}
+/* ==highlight== background */
+body {
+    --text-highlight-bg-rgb: 255, 208, 0;
+    --text-highlight-bg: rgba(var(--text-highlight-bg-rgb), 0.4);
+}
+
+/* ==highlight== text color */
+.cm-s-obsidian span.cm-highlight, .markdown-rendered mark {
+    color: blue;
+}
