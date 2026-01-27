@@ -1,0 +1,474 @@
+:root{
+  --pencil-primary:#3498db;
+  --pencil-secondary:#2ecc71;
+}
+body{
+  /* border styling start*/
+  --border-width:3px;
+  /* border styling end */
+  /* ====================== */
+  /* cursor styling start */
+  --cursor:default;
+  --cursor-link:pointer;
+  /* cursor styling end */
+  /* ====================== */
+  /* icon styling start */
+  --icon-size: 16px;
+  --icon-color: #8b5cf6;          /* Electric Violet */
+  --icon-color-hover: #d946ef;    /* Fuchsia (The bridge) */
+  --icon-color-active: #f43f5e;   /* Rose Red (Softer than pure red) */
+  --icon-color-focused: #ec4899;  /* Hot Pink */
+  --icon-opacity: 0.8;
+  --icon-opacity-hover: 1;
+  --icon-opacity-active: 1;
+  /* icon sytling end */
+  /* ================================= */
+  /* typography styling start */
+  --font-interface-theme: "Segoe Print", "Bradley Hand", "Chalkboard SE", "Comic Sans MS", cursive;
+  --font-text-theme: "Segoe Print", "Bradley Hand", "Chalkboard SE", "Comic Sans MS", cursive;
+  --font-monospace-theme: 'Courier New', monospace;
+  --font-weight: 700; 
+  --bold-modifier: 500; 
+  --bold-weight: 900; 
+  --bold-color: #f3ecec; 
+  --italic-color: rgb(253, 252, 253); 
+  /* typography styling end */
+  /* ====================== */
+  /* checkbox styling start */
+  --checkbox-radius: 50%; 
+  --checkbox-size: 18px;
+  --checkbox-marker-color: #ffffff;
+  --checkbox-color: rgb(165, 28, 239); 
+  --checkbox-color-hover: rgb(209, 71, 251);
+  --checkbox-border-color: #a1a1aa;
+  --checkbox-border-color-hover: #7e22ce;
+  --checklist-done-decoration: line-through;
+  --checklist-done-color: #94a3b8; 
+  --checkbox-margin-inline-start: 0.5em;
+  /* checkbox styling end */
+  /* ====================== */
+  /* navigation styling start */
+  --nav-item-size: 0.95em;
+  --nav-item-color: #4b5563;
+  --nav-item-color-hover: #7e22ce;
+  --nav-item-color-active: #a855f7;
+  --nav-item-color-selected: #2e1065;
+  --nav-item-color-highlighted: #ffffff;
+  --nav-item-background-hover: rgba(168, 85, 247, 0.08);
+  --nav-item-background-active: rgba(168, 85, 247, 0.15);
+  --nav-item-background-selected: rgba(168, 85, 247, 0.12);
+  --nav-item-padding: 6px 10px;
+  --nav-item-parent-padding: 6px 8px;
+  --nav-item-children-padding-start: 16px;
+  --nav-item-children-margin-start: 8px;
+  --nav-item-weight: 500;
+  --nav-item-weight-hover: 600;
+  --nav-item-weight-active: 700;
+  --nav-item-white-space: nowrap;
+  --nav-indentation-guide-width: 1.5px;
+  --nav-indentation-guide-color: rgba(126, 34, 206, 0.2);
+  --nav-collapse-icon-color: #94a3b8;
+  --nav-collapse-icon-color-collapsed: #64748b;
+  --nav-heading-color: #1e1b4b;
+  --nav-heading-color-hover: #7e22ce;
+  --nav-heading-color-collapsed: #6b7280;
+  --nav-heading-color-colapsed-hover: #4b5563;
+  --nav-heading-weight: 700;
+  --nav-heading-weight-hover: 700;
+  /* navigation styling end */
+  /* ================================== */
+  /* tabs styling start */
+  --tab-background-active: #ffffff;
+  --tab-text-color: #64748b;
+  --tab-text-color-active: #7e22ce;
+  --tab-text-color-focused: #475569;
+  --tab-text-color-focused-active: #7e22ce;
+  --tab-text-color-focused-highlighted: #9333ea;
+  --tab-text-color-focused-active-current: #2e1065;
+  --tab-font-size: 0.9rem;
+  --tab-font-weight: 500;
+  --tab-container-background: #f1f5f9;
+  --tab-divider-color: rgba(0, 0, 0, 0.05);
+  --tab-outline-color: #e2e8f0;
+  --tab-outline-width: 1px;
+  --tab-curve: 8px;
+  --tab-radius: 6px 6px 0 0;
+  --tab-radius-active: 6px 6px 0 0;
+  --tab-width: 180px;
+  --tab-max-width: 240px;
+  --tab-stacked-pane-width: 700px;
+  --tab-stacked-header-width: 40px;
+  --tab-stacked-font-size: 0.85rem;
+  --tab-stacked-font-weight: 600;
+  --tab-stacked-text-align: center;
+  --tab-stacked-text-transform: uppercase;
+  --tab-stacked-text-writing-mode: vertical-lr;
+  --tab-stacked-shadow: -2px 0 10px rgba(0, 0, 0, 0.05);
+  /* tabs styling end */
+--bases-header-border-width: 0 0 1px 0;
+  --bases-header-height: 48px;
+  --bases-header-padding-start: 12px;
+  --bases-header-padding-end: 12px;
+  --bases-toolbar-label-display: flex;
+  --bases-toolbar-badge-display: inline-block;
+  --bases-embed-border-width: 1.5px;
+  --bases-embed-border-color: #e2e8f0;
+  --bases-embed-border-radius: 8px;
+  --bases-filter-menu-width: 280px;
+
+  /* --- Table View (The Ledger Look) --- */
+  --bases-table-container-border-width: 1px;
+  --bases-table-container-border-radius: 4px;
+  --bases-table-header-weight: 700;
+  --bases-table-header-color: #2e1065;
+  --bases-table-header-icon-display: inline-block;
+  --bases-table-header-background: #f8fafc;
+  --bases-table-header-background-hover: #f1f5f9;
+  --bases-table-header-sort-mask: rgba(126, 34, 206, 0.1);
+  --bases-table-border-color: #cbd5e1;
+  --bases-table-column-border-width: 1px;
+  --bases-table-row-border-width: 1px;
+  --bases-table-row-background-hover: rgba(168, 85, 247, 0.04);
+  --bases-table-row-height: 36px;
+  --bases-table-text-size: 0.95em;
+  --bases-table-column-max-width: 400px;
+  --bases-table-column-min-width: 100px;
+  --bases-table-cell-radius-active: 0px;
+  --bases-table-cell-shadow-active: inset 0 0 0 2px #7e22ce;
+  --bases-table-cell-background-active: #ffffff;
+  --bases-table-cell-background-disabled: #f1f5f9;
+
+  /* blockquote styling */
+  --blockquote-background-color: rgba(168, 85, 247, 0.03);
+  --blockquote-border-thickness: 3px;
+  --blockquote-border-color: #7e22ce;
+  --blockquote-font-style: italic;
+  --blockquote-color: #334155;
+  /* blockquote styling end */
+  /* callout styling start */
+  --callout-border-width: 2px;
+  --callout-border-opacity: 0.4;
+  --callout-padding: 12px;
+  --callout-radius: 8px;
+  --callout-blend-mode: multiply; /* Better for a "ink on paper" overlay look */
+
+  /* Typography */
+  --callout-title-color: inherit;
+  --callout-title-padding: 0 0 8px 0;
+  --callout-title-size: 1.05em;
+  --callout-title-weight: 700;
+  --callout-content-padding: 4px 0 0 0;
+  --callout-content-background: transparent;
+
+  /* Type Colors (The "Highlighter" Palette) */
+  --callout-default: 168, 85, 247;   /* Purple (Your main theme) */
+  --callout-info: 14, 165, 233;      /* Sky Blue */
+  --callout-todo: 161, 161, 170;    /* Pencil Grey */
+  --callout-important: 244, 63, 94; /* Rose Red */
+  --callout-tip: 34, 197, 94;       /* Mint Green */
+  --callout-success: 22, 163, 74;    /* Grass Green */
+  --callout-question: 245, 158, 11;  /* Amber */
+  --callout-warning: 234, 88, 12;    /* Burnt Orange */
+  --callout-fail: 220, 38, 38;       /* Deep Red */
+  --callout-error: 185, 28, 28;      /* Crimson */
+  --callout-bug: 157, 23, 77;       /* Maroon */
+  --callout-example: 126, 34, 206;   /* Royal Purple */
+  --callout-summary: 20, 184, 166;   /* Teal */
+  --callout-quote: 100, 116, 139;    /* Slate */
+  /* callout styling end */
+  /* cody styling start */
+  --code-background: #f8fafc;
+  --code-white-space: pre-wrap;
+  --code-size: 0.9em;
+
+  /* --- Syntax Highlighting (The "Ink & Pencil" Palette) --- */
+  --code-normal: #334155;       /* Standard Pen Ink */
+  --code-comment: #94a3b8;      /* Faint Pencil Sketch */
+  --code-function: #7e22ce;     /* Bold Purple Ink */
+  --code-important: #e11d48;    /* Red Pen Correction */
+  --code-keyword: #2563eb;      /* Blue Ink */
+  --code-operator: #64748b;     /* Muted Grey */
+  --code-property: #0891b2;     /* Cyan/Teal */
+  --code-punctuation: #94a3b8;  /* Light Pencil */
+  --code-string: #059669;       /* Green Felt-Tip */
+  --code-tag: #7c3aed;          /* Deep Violet */
+  --code-value: #ea580c;        /* Orange Highlighter */
+  /* code styling end */
+
+  /* file sytling start */
+  --file-line-width: 700px;
+
+  /* Folding Offset: Matches the indentation of your margins */
+  --file-folding-offset: 24px;
+
+  /* Margins: Generous margins for a clean, open "notebook" feel */
+  --file-margins: 40px 60px;
+
+  /* Header Typography: Bold and distinct */
+  --file-header-font-size: 1.1em;
+  --file-header-font-weight: 700;
+
+  /* Header Border: A subtle "ink line" separating the title from the body */
+  --file-header-border: 1px solid rgba(126, 34, 206, 0.15);
+
+  /* Alignment: Usually 'flex-start' for handwriting to keep the flow natural */
+  --file-header-justify: flex-start;
+  /* file styling end */
+
+  /* heading styling */
+  --heading-formatting: rgba(126, 34, 206, 0.3); /* Faint purple for the # characters */
+  --heading-spacing: 1.5em;
+
+  /* --- H1: Royal Red --- */
+  --h1-color: #e11d48;
+  --h1-size: 1.8em;
+  --h1-weight: 800;
+  --h1-line-height: 1.3;
+  --h1-style: normal;
+  --h1-variant: normal;
+
+  /* --- H2: Sunset Orange --- */
+  --h2-color: #ea580c;
+  --h2-size: 1.6em;
+  --h2-weight: 750;
+  --h2-line-height: 1.3;
+
+  /* --- H3: Golden Amber --- */
+  --h3-color: #d97706;
+  --h3-size: 1.4em;
+  --h3-weight: 700;
+  --h3-line-height: 1.4;
+
+  /* --- H4: Leaf Green --- */
+  --h4-color: #059669;
+  --h4-size: 1.25em;
+  --h4-weight: 700;
+  --h4-line-height: 1.4;
+
+  /* --- H5: Deep Sky Blue --- */
+  --h5-color: #0284c7;
+  --h5-size: 1.1em;
+  --h5-weight: 650;
+  --h5-line-height: 1.5;
+
+  /* --- H6: Royal Indigo --- */
+  --h6-color: #4f46e5;
+  --h6-size: 1em;
+  --h6-weight: 600;
+  --h6-line-height: 1.5;
+  --h6-style: italic; /* Differentiation for the smallest heading */
+  /* heading styling end */
+
+  /* Using a soft purple ink that matches your theme */
+  --hr-color: rgba(126, 34, 206, 0.2);
+  
+  /* A thickness of 2px feels more like a felt-tip pen than 1px */
+  --hr-thickness: 2px;
+
+  /* Color: A deep, rich purple to signify the "Main Title" */
+  --inline-title-color: #2e1065;
+
+  /* Font: Inherits your handwriting stack for consistency */
+  --inline-title-font: "Segoe Print", "Bradley Hand", "Chalkboard SE", "Comic Sans MS", cursive;
+
+  /* Line Height: Generous spacing to allow for cursive loops */
+  --inline-title-line-height: 1.2;
+
+  /* Size: Slightly larger than your H1 (1.8em) to establish clear hierarchy */
+  --inline-title-size: 2.2em;
+
+  /* Style & Variant: Clean and bold */
+  --inline-title-style: normal;
+  --inline-title-variant: normal;
+
+  /* Weight: Extra bold to mimic a thick marker or fountain pen */
+  --inline-title-weight: 800;
+  /* --- Resolved Links (Internal) --- */
+  --link-color: #7e22ce;
+  --link-color-hover: #9333ea;
+  --link-decoration: underline;
+  --link-decoration-hover: underline;
+  --link-decoration-thickness: 1.5px;
+  --link-weight: 600;
+
+  /* --- Unresolved Links (The "Sketch" Look) --- */
+  --link-unresolved-color: #94a3b8; /* Pencil grey */
+  --link-unresolved-opacity: 0.7;
+  --link-unresolved-filter: none;
+  --link-unresolved-decoration-style: dashed; /* Looks like a placeholder */
+  --link-unresolved-decoration-color: #cbd5e1;
+
+  /* --- External Links (The "Globe" Look) --- */
+  --link-external-color: #2563eb; /* A distinct blue ink */
+  --link-external-color-hover: #3b82f6;
+  --link-external-decoration: underline;
+  --link-external-decoration-hover: underline;
+  /* --- Indentation & Layout --- */
+  --list-indent: 2.2em;
+  --list-indent-editing: 2.2em;
+  --list-indent-source: 2.2em;
+  --list-spacing: 0.4em; /* A bit of breathing room for cursive descenders */
+
+  /* --- Colors (The Ink Palette) --- */
+  --list-marker-color: #7e22ce;        /* Royal Purple Ink */
+  --list-marker-color-hover: #9333ea;  /* Brighter Purple */
+  --list-marker-color-collapsed: #94a3b8; /* Faint Grey */
+
+  /* --- Bullet Styling (The Hand-Drawn Dot) --- */
+  --list-bullet-border: none;
+  --list-bullet-end-padding: 8px;
+  --list-bullet-radius: 50%;
+  --list-bullet-size: 6px;
+  --list-bullet-transform: translateY(1px); /* Aligns with the baseline of handwriting */
+
+  /* --- Numbered Lists --- */
+  --list-numbered-style: decimal; /* Classic "1. 2. 3." style */
+  /* --- Metadata Container --- */
+  --metadata-background: rgba(168, 85, 247, 0.03);
+  --metadata-display-editing: block;
+  --metadata-display-reading: block;
+  --metadata-max-width: 100%;
+  --metadata-padding: 16px;
+  --metadata-border-color: rgba(126, 34, 206, 0.1);
+  --metadata-border-radius: 8px;
+  --metadata-border-width: 1px;
+  --metadata-gap: 4px;
+
+  /* --- Dividers & Borders --- */
+  --metadata-divider-color: rgba(126, 34, 206, 0.08);
+  --metadata-divider-color-hover: rgba(126, 34, 206, 0.2);
+  --metadata-divider-color-focus: rgba(126, 34, 206, 0.3);
+  --metadata-divider-width: 1px;
+
+  /* --- Individual Property Styling --- */
+  --metadata-property-padding: 4px 8px;
+  --metadata-property-radius: 4px;
+  --metadata-property-radius-hover: 4px;
+  --metadata-property-radius-focus: 4px;
+  --metadata-property-background: transparent;
+  --metadata-property-background-hover: rgba(168, 85, 247, 0.05);
+  --metadata-property-background-active: rgba(168, 85, 247, 0.08);
+
+  /* --- Labels (The Field Names) --- */
+  --metadata-label-background-hover: transparent;
+  --metadata-label-background-active: transparent;
+  --metadata-label-font-size: 0.85em;
+  --metadata-label-font-weight: 600;
+  --metadata-sidebar-label-font-size: 0.8em;
+  --metadata-label-text-color: #64748b; /* Pencil grey */
+  --metadata-label-text-color-hover: #7e22ce;
+  --metadata-label-width: 140px;
+
+  /* --- Inputs (The Values) --- */
+  --metadata-input-height: 28px;
+  --metadata-input-text-color: #2e1065; /* Deep Ink */
+  --metadata-input-font-size: 0.9em;
+  --metadata-sidebar-input-font-size: 0.85em;
+  --metadata-input-background: transparent;
+  --metadata-input-background-hover: rgba(255, 255, 255, 0.5);
+  --metadata-input-background-active: #ffffff;
+
+  /* --- Table Container & Structure --- */
+  --table-background: transparent;
+  --table-border-width: 1px;
+  --table-border-color: #cbd5e1;
+  --table-cell-vertical-alignment: baseline;
+  --table-white-space: normal;
+  --table-line-height: 1.5;
+  --table-text-size: 0.95em;
+  --table-text-color: #334155;
+  --table-column-max-width: 300px;
+
+  /* --- Table Header (The "Capitals") --- */
+  --table-header-background: rgba(168, 85, 247, 0.05);
+  --table-header-background-hover: rgba(168, 85, 247, 0.1);
+  --table-header-border-width: 0 0 2px 0;
+  --table-header-border-color: #7e22ce;
+  --table-header-font: inherit;
+  --table-header-size: 1em;
+  --table-header-weight: 700;
+  --table-header-color: #2e1065;
+
+  /* --- Rows & Columns (The Ledger Lines) --- */
+  --table-row-alt-background: rgba(241, 245, 249, 0.5);
+  --table-row-background-hover: rgba(168, 85, 247, 0.03);
+  --table-row-alt-background-hover: rgba(168, 85, 247, 0.05);
+  --table-row-last-border-width: 1px;
+  --table-column-alt-background: transparent;
+  --table-column-first-border-width: 0;
+  --table-column-last-border-width: 0;
+
+  /* --- Selections & Dragging (The Interaction) --- */
+  --table-selection: rgba(168, 85, 247, 0.1);
+  --table-selection-blend-mode: multiply;
+  --table-selection-border-color: #a855f7;
+  --table-selection-border-width: 1.5px;
+  --table-selection-border-radius: 4px;
+  --table-drag-handle-background: #f1f5f9;
+  --table-drag-handle-background-active: #e2e8f0;
+  --table-drag-handle-color: #94a3b8;
+  --table-drag-handle-color-active: #7e22ce;
+
+  /* --- Buttons (The "Sketchy" UI) --- */
+  --table-add-button-background: transparent;
+  --table-add-button-border-width: 1px;
+  --table-add-button-border-color: #cbd5e1;
+
+  /* --- Typography --- */
+  --tag-size: 0.85em;
+  --tag-weight: 600;
+  --tag-color: #7e22ce;        /* Royal Purple Ink */
+  --tag-color-hover: #ffffff;   /* Contrast for hover */
+  --tag-decoration: none;
+  --tag-decoration-hover: none;
+
+  /* --- Backgrounds & Borders --- */
+  --tag-background: rgba(168, 85, 247, 0.08);
+  --tag-background-hover: #7e22ce;
+  --tag-border-color: rgba(126, 34, 206, 0.3);
+  --tag-border-color-hover: #7e22ce;
+  --tag-border-width: 1.5px;
+
+  /* --- Shape & Spacing --- */
+  --tag-padding-x: 0.65em;
+  --tag-padding-y: 0.15em;
+  --tag-radius: 12px; /* Makes it look like a hand-drawn oval */
+  /* --- The Drafting Surface --- */
+  --canvas-background: #f8fafc;        /* A clean, off-white paper */
+  --canvas-card-label-color: #475569;  /* Pencil-grey for labels */
+  --canvas-dot-pattern: #e2e8f0;       /* Subtle dots for alignment */
+
+  /* --- The Rainbow Sticky Notes --- */
+  --canvas-color-1: #fecdd3; /* Soft Rose (Pink sticky note) */
+  --canvas-color-2: #ffedd5; /* Soft Peach (Orange sticky note) */
+  --canvas-color-3: #fef9c3; /* Classic Yellow sticky note */
+  --canvas-color-4: #dcfce7; /* Mint Green (Highlighter green) */
+  --canvas-color-5: #e0f2fe; /* Sky Blue (Post-it blue) */
+  --canvas-color-6: #f3e8ff; /* Lavender (Purple sticky note) */
+
+  --vault-profile-display: flex;
+  --vault-profile-actions-display: flex;
+
+  /* --- Typography (The "Bookplate" Signature) --- */
+  --vault-profile-font-size: 0.95em;
+  --vault-profile-font-weight: 700;
+  
+  /* --- Colors --- */
+  --vault-profile-color: #1e1b4b;       /* Deep Ink Indigo */
+  --vault-profile-color-hover: #7e22ce; /* Switches to Theme Purple on hover */ 
+  /* --- Layout --- */
+  --graph-controls-width: 260px;
+
+  /* --- Typography --- */
+  --graph-text: #475569;                /* Soft pencil-grey for labels */
+
+  /* --- Lines & Connections --- */
+  --graph-line: rgba(203, 213, 225, 0.4); /* Faint pencil guide lines */
+
+  /* --- Nodes (The Ink Drops) --- */
+  --graph-node: #7e22ce;                /* Theme Purple (Resolved notes) */
+  --graph-node-unresolved: #94a3b8;     /* Pencil Grey (Unwritten notes) */
+  --graph-node-focused: #e11d48;        /* Red Pen (Active focus) */
+  --graph-node-tag: #059669;            /* Green Ink (Tags) */
+  --graph-node-attachment: #ea580c;     /* Orange Ink (Images/Files) */
+}
